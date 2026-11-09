@@ -1,0 +1,6 @@
+total_cuenta = input("¿Cuál es el total de la cuenta?: ")
+propina = input("¿Qué porcentaje de propina deseas dejar?: ")
+
+propina_total = float(total_cuenta) / 100 * float(propina)
+
+print("Tu propina es de:", propina_total)
