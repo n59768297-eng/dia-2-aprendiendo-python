@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🐱 Toca al Gato — Web del juego</title>
+<link rel="stylesheet" href="juego-gato/style.css" />
+<style>
+  /* Ajustes para que el juego ocupe toda la web */
+  html, body { height: 100%; }
+  #contenedor-juego { position: fixed; inset: 0; display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+  <div id="contenedor-juego">
+    <header>
+      <h1>🐱 Toca al Gato 🐾</h1>
+      <div class="marcador">
+        <span id="puntos">Toques: 0</span>
+        <span id="racha">Mejor racha de ronroneos: 0</span>
+      </div>
+    </header>
+
+    <main id="escena">
+      <!-- El gato está SOLO en la escena -->
+      <div id="gato" class="gato" role="button" aria-label="Tocar al gato" tabindex="0">
+        <div class="gato-svg">
+          <svg viewBox="0 0 200 200" width="200" height="200">
+            <!-- Orejas -->
+            <polygon points="55,60 75,20 95,55" fill="#f5a623" stroke="#333" stroke-width="3"/>
+            <polygon points="145,60 125,20 105,55" fill="#f5a623" stroke="#333" stroke-width="3"/>
+            <polygon points="65,52 76,30 88,50" fill="#ffc9de"/>
+            <polygon points="135,52 124,30 112,50" fill="#ffc9de"/>
+            <!-- Cara -->
+            <circle cx="100" cy="105" r="62" fill="#f5a623" stroke="#333" stroke-width="3"/>
+            <!-- Bigotes -->
+            <line x1="30" y1="105" x2="65" y2="100" stroke="#333" stroke-width="2"/>
+            <line x1="30" y1="118" x2="65" y2="112" stroke="#333" stroke-width="2"/>
+            <line x1="170" y1="105" x2="135" y2="100" stroke="#333" stroke-width="2"/>
+            <line x1="170" y1="118" x2="135" y2="112" stroke="#333" stroke-width="2"/>
+            <!-- Ojos -->
+            <ellipse class="ojo" cx="78" cy="92" rx="9" ry="12" fill="#2d2d2d"/>
+            <ellipse class="ojo" cx="122" cy="92" rx="9" ry="12" fill="#2d2d2d"/>
+            <circle cx="81" cy="88" r="3" fill="#fff"/>
+            <circle cx="125" cy="88" r="3" fill="#fff"/>
+            <!-- Nariz y boca -->
+            <polygon points="100,112 93,105 107,105" fill="#e05a7a"/>
+            <path d="M100 112 Q92 124 84 118" stroke="#333" stroke-width="2.5" fill="none"/>
+            <path d="M100 112 Q108 124 116 118" stroke="#333" stroke-width="2.5" fill="none"/>
+            <!-- Patitas -->
+            <ellipse cx="70" cy="162" rx="16" ry="10" fill="#f5a623" stroke="#333" stroke-width="2.5"/>
+            <ellipse cx="130" cy="162" rx="16" ry="10" fill="#f5a623" stroke="#333" stroke-width="2.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div id="mensaje" class="mensaje"></div>
+    </main>
+
+    <footer>
+      <p>Cada toque hace girar al gato 💫 — ¡él está solo, así que dale cariño!</p>
+    </footer>
+  </div>
+
+  <script src="juego-gato/script.js"></script>
+</body>
+</html>
