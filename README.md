@@ -2,12 +2,13 @@
 
 Juego web: cada vez que tocas al gato, él gira 💫 (¡y está solo en la escena!).
 
-## Cómo jugar
-1. Abre `juego-gato/index.html` en el navegador, o ejecuta:
+## Cómo jugar (web)
+1. Ejecuta el servidor desde la raíz del proyecto:
    ```bash
-   cd juego-gato && python3 -m http.server 8080
+   python3 -m http.server 8080
    ```
-2. Haz clic (o pulsa Enter/Espacio) sobre el gato.
+2. Abre en el navegador: **http://localhost:8080/** (la web principal es `index.html` en la raíz; también funciona abriendo `juego-gato/index.html` directamente).
+3. Haz clic (o pulsa Enter/Espacio) sobre el gato.
 
 ## Características
 - El gato **gira 360°** con cada toque.
